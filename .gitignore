@@ -1,28 +1,31 @@
-# Python cache files
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 
 # Virtual environment
-env/
 venv/
 ENV/
-.venv/
 
-# VSCode settings
-.vscode/
+# Database files
+*.db
+*.sqlite3
 
-# PyCharm settings
-.idea/
+# Logs
+*.log
 
 # OS files
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
+# IDE configs
+.vscode/
+.idea/
 
-# Local config (token va parol yozilgan fayllar)
-config.json
-config.py
+# Big files (tasodifan yuklanmasin)
+*.exe
+*.pkg
+*.zip
+*.rar
+*.mp3
+*.mp4
