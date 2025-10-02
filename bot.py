@@ -3,9 +3,15 @@ import sqlite3
 from datetime import datetime
 from telebot import types
 import matplotlib.pyplot as plt
+import os
 
-API_TOKEN = "8290278259:AAEQ26ACa5ZZ9my3AlLaUccf91L8QVKEdyw"  # o'z tokeningizni yozing
-bot = telebot.TeleBot(API_TOKEN)
+# Tokenni Render'dagi Environment Variable'dan olish
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+if not BOT_TOKEN:
+    raise ValueError("❌ BOT_TOKEN environment variable topilmadi!")
+
+bot = telebot.TeleBot(BOT_TOKEN)
 
 # === DATABASE ===
 con = sqlite3.connect("budget.db", check_same_thread=False)
